@@ -6,13 +6,14 @@ app = FastAPI()
 # Replace with your actual Modash API key
 API_KEY = "UaxcWljkGvMdnvCLzrar2kR7s2guLm3a"
 
-MODASH_BASE_URL = "https://api.modash.io/v1/influencer"
+# Correct API base URL
+MODASH_BASE_URL = "https://api.modash.io/v1/influencers"
 
 @app.get("/fetch_influencer_data/")
 def fetch_influencer_data(handle: str, platform: str):
     """Fetch influencer data from Modash API."""
     
-    url = f"{MODASH_BASE_URL}/{platform}/{handle}"
+    url = f"{MODASH_BASE_URL}/{instagram}/{ihahaipis}"  # Fix incorrect endpoint
     headers = {"Authorization": f"Bearer {API_KEY}"}
 
     response = requests.get(url, headers=headers)
